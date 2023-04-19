@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid tomato;
+  font-size: 2rem;
+  margin-top: 8px;
+}
+.nav a {
+  padding: 0 8px;
+}
+.product {
+  padding: 16px;
+}
