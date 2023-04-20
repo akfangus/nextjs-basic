@@ -1,6 +1,8 @@
 import { getProduct, getProducts } from "@/service/products";
 import { notFound } from "next/navigation";
 
+export const revalidate = 3;
+
 type Props = {
   params: {
     slug: string;
@@ -20,7 +22,6 @@ export default async function ProductPage({ params: { slug } }: Props) {
   const product = await getProduct(slug);
 
   if (!product) {
-    console.log("제품이 없습니다.");
     notFound();
   }
   // 서버에 있는 데이터중 해당 제품의 정보를 찾아서 보여줌
