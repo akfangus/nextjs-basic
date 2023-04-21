@@ -5,6 +5,7 @@ export type Product = {
   id: string;
   name: string;
   price: number;
+  image: string;
 };
 
 //비동기는 Promise를 반환하기 때문에 typescript에 Promise를 적고
