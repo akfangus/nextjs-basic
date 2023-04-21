@@ -1,6 +1,8 @@
 import { getProducts } from "@/service/products";
 import Link from "next/link";
 import MeowArticle from "@/components/MeowArticle";
+import Image from "next/image";
+import clothesImage from "../../../public/images/clothes.jpg";
 
 //ISR을 구현하기 위한 코드
 // 몇초정도 뒤에 다시 불러오는지 설정
@@ -23,6 +25,7 @@ export default async function ProductsPage() {
   return (
     <>
       <h1>제품 소개 페이지</h1>
+      <Image src={clothesImage} alt="clothes" />
       <ul>
         {products.map((product, index) => (
           <li key={index}>
