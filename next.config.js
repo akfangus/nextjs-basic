@@ -12,6 +12,29 @@ const nextConfig = {
       },
     ],
   },
+  //308 status code
+  async redirects() {
+    return [
+      {
+        source: "/products/deleted_forever",
+        destination: "/products",
+        permanent: true,
+      },
+      {
+        source: "/products/deleted_temp",
+        destination: "/products",
+        permanent: false,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/item/:slug",
+        destination: "/products/:slug",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
